@@ -1,0 +1,344 @@
+body{
+    background-color: #E8EEF2;
+    font-family: 'Montserrat', sans-serif;
+}
+/*Nabvar*/
+nav ul{
+    list-style: none;
+    display: flex;
+}
+nav a{
+    text-decoration: none;
+    padding: 1.5rem;
+    font-weight: bold;
+    color: #6B4B3E;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+.active{
+    color: #77B6EA;
+    background-color: #D6C9C9;
+    padding: 0.5rem 0.9rem;
+    outline: #6B4B3E 1px solid;
+    border-radius: 0.3rem;
+}
+nav a:hover{
+    color: #77B6EA;
+}
+header{
+    background-color: #C7D3DD;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+.logo{
+    background-image: url('../assets/img/SVG/logo.svg');
+    height: 2rem;
+    background-repeat: no-repeat;
+    flex: 1;
+}
+/*body*/
+main{
+    width: 90%;
+    margin: auto;
+    max-width: 1100px;
+    line-height: 1.5;
+}
+.header .row:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F8F4F9;
+    margin: 2rem 0;
+    padding: 0 2rem;
+    border-radius: 0.2rem;
+}
+.header .row:nth-child(1) .col:nth-child(1){
+    flex-basis: 60%;
+}
+.header .row:nth-child(1) .col:nth-child(2){
+    
+}
+.header .row:nth-child(1) img{
+    width: 23rem;
+}
+.header .row:nth-child(1) .col:nth-child(1) h1{
+    font-size: 3rem;
+}
+.container-sabores{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.box{
+    flex: 1;
+    margin: 1rem 0.5rem;
+    padding: 1rem 0.8rem;
+    background-color: #FFD6AF;
+    color: #6B4B3E;
+    text-align: center;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+}
+.box .description{
+    line-height: 1.3;
+}
+.container-sabores .box{
+    display: flex;
+    align-items: center;
+}
+.container-sabores .box img{
+    width: 8rem;
+}
+
+/*Section pastels*/
+.pasteles, .adornos, .personalizar-pedido{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    margin: 2rem 0;
+    background-color: #F8F4F9;
+    border-radius: 0.2rem;
+    gap: 1rem;
+}
+/*cards*/
+.container-cards-pasteles{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+}
+.card img{
+    object-fit: cover;
+    object-position: 50% 50%;
+    padding: 0;
+    height: 15rem;
+    width: 15rem;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+}
+.card .body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; /*!*/
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border: 2px solid #FFD6AF;
+    border-top: 0;
+}
+.body .name{
+    margin-top: 0.7rem;
+    font-size: large;
+    font-weight: 900;
+}
+.body .price{
+    font-size: x-large;
+}
+.body button{
+    width: 6rem;
+    margin-bottom: 0.7rem;
+    padding: 0.5rem 1rem;
+    font-size: x-small;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid gainsboro;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+.body button:hover{
+    background-color: #BEA7E5;
+    font-weight: 700;
+    color: #F8F4F9;
+}
+
+/*Detalles sabores*/
+.detalles-sabores{
+    display: flex;
+}
+.detalles-sabores .box{
+    border: 1px solid #C49E85;
+    background-color: #F8F4F9;
+    border-radius: 0.2rem;
+    box-shadow: none;
+}
+.description ul{
+  line-height: 1.5rem;
+}
+.description ul li{
+    list-style: none;
+}
+.detalles-sabores .box:nth-child(odd) .description ul li::before{
+    display: inline-block;
+    content: '';
+    height: 2rem;
+    width: 2rem;
+    background-image: url('../assets/img/svg/party-elements/Asset\ 10.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: -3rem;
+    margin-bottom: -1rem;
+}
+.detalles-sabores .box:nth-child(even) .description ul li::before{
+    display: inline-block;
+    content: '';
+    height: 2rem;
+    width: 2rem;
+    background-image: url('../assets/img/svg/party-elements/Asset\ 9.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: -3rem;
+    margin-bottom: -1rem;
+}
+.box .content{
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+}
+.content img{
+    width: 6rem;
+}
+/*Party elements*/
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.products .card{ /*override propieties card*/
+    border: 1px solid #C49E85;
+    border-radius: 0.2rem;
+}
+.products .card .body{ /*override propieties body card*/
+    border: none;
+    border-top: 1px solid #C49E85;
+}
+.products .card img{ /*override propieties image card*/
+    object-fit: scale-down;
+}
+.party-element{
+    flex-basis: 10rem;
+}
+.party-element img{
+    width: 10rem;
+}
+.personalizar-pedido .row{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.personalizar-pedido .row .col:nth-child(1){
+    align-self: center;
+}
+.personalizar-pedido .row .col:nth-child(1) img{
+    width: 30rem;
+}
+.personalizar-pedido .row .col:nth-child(2){
+    flex-basis: 100%;
+}
+.personalizar-pedido .row .col form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.personalizar-pedido .row .col form input, textarea{
+    outline: none;
+    padding: 0.5rem;
+    border: 1px solid #6B4B3E;
+    border-radius: 0.2rem;
+}
+.personalizar-pedido .row .col form button{
+    align-self: center;
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    background-color: #D6C9C9;
+    color: #6B4B3E;
+    font-size: larger;
+    border: 0.2px solid #6B4B3E;
+}
+select {
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  background-color: #f1f1f1;
+}
+footer{
+    background-color: #C7D3DD;
+    overflow: hidden;
+}
+footer .row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+.col .logo img{
+    width: 10rem;
+    background-repeat: no-repeat;
+}
+footer p{
+    font-size: larger;
+    color: #2B2D42; 
+} 
+footer span{
+    font-weight: bold;
+}
+/*PASTELERO*/
+.rest-products-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    margin: 2rem 0;
+    background-color: #F8F4F9;
+    border-radius: 0.2rem;
+    gap: 1rem;
+}
+.rest-products-container .cards-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.rest-products-container h2{
+    text-align: center;
+    color: #2B2D42;
+}
+.cards-container .card{
+    padding: 1.5rem;
+    border: 2px solid #6B4B3E;
+    border-radius: 0.5rem;
+}
+.cards-container .card p{
+    font-weight: bold;
+}
+.cards-container .card span{
+    color: #BEA7E5;
+}
+@media( max-width: 700px ){
+    .header .row:nth-child(1){
+        flex-direction: column;
+        text-align: center;
+    }
+    .container-sabores{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media (max-width: 575.98px) {
+    .container-sabores .box{
+        flex-direction: column;
+    }
+ }
