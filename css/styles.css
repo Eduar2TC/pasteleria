@@ -2,6 +2,10 @@ body{
     background-color: #E8EEF2;
     font-family: 'Montserrat', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 /*Nabvar*/
 nav ul{
     list-style: none;
