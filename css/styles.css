@@ -293,8 +293,16 @@ main{
     border-radius: 0.2rem;
     background-color: #D6C9C9;
     color: #6B4B3E;
-    font-size: larger;
+    font-size: large;
+    text-transform: uppercase;
     border: 0.2px solid #6B4B3E;
+}
+.personalizar-pedido .row .col form button:hover{
+    cursor: pointer;
+    background-color: #BEA7E5;
+    font-weight: 700;
+    color: white;
+    font-weight: bold;
 }
 select {
   padding: 0.5rem 1rem;
