@@ -49,6 +49,13 @@ nav{
     background-repeat: no-repeat;
     flex: 1;
 }
+.menu-icon svg{
+    height: 2rem;
+    fill: wheat;
+}
+.menu-icon{
+    display: none;
+}
 /*body*/
 main{
     width: 90%;
@@ -266,6 +273,7 @@ main{
     overflow: hidden;
     background-color: #f16679;
     border-radius: 0.2rem;
+    transform: scaleX(-1);
 }
 .personalizar-pedido .row .col:nth-child(1) img{
     position: absolute;
@@ -392,7 +400,7 @@ footer span{
     }
     .personalizar-pedido .row .col:nth-child(1) img{
         position: absolute;
-        left: -24%;
+        left: -10%;
         top: 0;
     }
     footer .row .col:nth-child(3){
@@ -403,6 +411,57 @@ footer span{
     .header .row:nth-child(1){
         flex-direction: column;
         text-align: center;
+    }
+    /*Responsive menu*/
+    nav{
+        flex-flow: wrap;
+    }
+    .logo{
+        flex-basis: 20%;
+        align-self: flex-start;
+        margin-top: 1rem;
+        background-size: contain;
+        order: 1;
+    }
+    .menu-navegation{
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        gap: 1.5rem;
+        padding: 0;
+        order: 3;
+
+        display: none;
+    }
+    @keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .menu-navegation li{
+        width: 90%;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        border-bottom: 0.2rem solid #D6C9C9;
+    }
+    .menu-icon{
+        display: block;
+        align-self: flex-start;
+        margin-top: 1rem;
+        margin-right: 1rem;
+        order: 2;
+    }
+    .active{
+        padding: 1.5rem;
+        width: inherit;
+        text-align: center;
+        font-size: x-large;
+        outline: none;
+    }
+    .menu-navegation-active{
+        display: block;
+        animation: fadeIn 1s;
     }
     .container-sabores{
         flex-direction: column;
@@ -439,10 +498,16 @@ footer span{
         flex-direction: column;
         margin-top: 1rem;
     }
+    footer .row .col:nth-child(3){
+        width: 30rem;
+    }
 }
 @media (max-width: 575.98px) {
     .container-sabores .box{
         flex-direction: column;
+    }
+    footer .row .col:nth-child(3){
+        width: 20rem;
     }
  }
  /** {
